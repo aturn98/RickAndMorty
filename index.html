@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script scr='index.js' defer></script>
+    <title>Rick and Morty Database</title>
+</head>
+<body>
+    <section class="container section" id="services">
+        <div class="row">
+            <div class="col l12">
+                <ul class="tabs">
+                    <li class="tab col s6">
+                        <a href="#database" class="green-text text-darken-3">Database</a>
+                    </li>
+                    <li class="tab col s6">
+                        <a href="#generator" class="green-text text-darken-3">Generator</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="container section" id="main">
+        <div class="row">
+            <div class="col s3" id="database">
+               <ul id="character-list">
+               </ul>
+            </div>
+            <div class="col s9" id="generator">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate officiis necessitatibus repellat sunt ab? Ipsa quod totam, impedit numquam inventore iure eveniet ut placeat, ab repellat fugit sunt minus quasi.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     <script>
+         $(document).ready(function(){
+            $('.tabs').tabs();
+         });
+     </script>
+</body>
+</html>
