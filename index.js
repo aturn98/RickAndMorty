@@ -10,10 +10,11 @@ document.addEventListener("DOMContentLoaded", () =>{
     const showCharacters = characters => {
         characters.forEach(character => {
             const characterElement = document.createElement('li');
+            characterElement.id = `${character.id}`;
             characterElement.innerHTML = `${character.name}`;
             characterList.append(characterElement);
         });
-    }
+    };
     
     
-})
+});
