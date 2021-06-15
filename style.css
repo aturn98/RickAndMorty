@@ -1,0 +1,22 @@
+html {
+    min-height: 100%;
+    min-width: 100%;
+    background: linear-gradient(#64dd17, #ccff90);
+}
+
+.row{
+    background:linear-gradient(lightgray, darkgray);
+}
+
+::placeholder {
+    color: black;
+}
+
+#character-image {
+    padding-top: 1em;
+    border-radius: 2em;
+}
+
+#character-list {
+    padding-left: 1em;
+}

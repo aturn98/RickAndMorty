@@ -8,39 +8,64 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src='index.js' defer></script>
+    <link rel="stylesheet" href="style.css">
     <title>Rick and Morty Database</title>
 </head>
 <body>
-    <section class="container section" id="services">
-        <div class="row">
-            <div class="col l12">
-                <ul class="tabs">
-                    <li class="tab col s6">
-                        <a href="#database" class="green-text text-darken-3">Database</a>
-                    </li>
-                    <li class="tab col s6">
-                        <a href="#generator" class="green-text text-darken-3">Generator</a>
-                    </li>
-                </ul>
+   
+    <div id="services">
+        <section class="container section">
+            <div class="row">
+                <div class="col l12">
+                    <ul class="tabs">
+                        <li class="tab col s6">
+                            <a href="#database" class="green-text text-darken-3">Database</a>
+                        </li>
+                        <li class="tab col s6">
+                            <a href="#generator" class="green-text text-darken-3">Generator</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
+
+    <div id="database">
+        <section class="container section">
+            <div class="row database">
+                <div class="col l4">
+                    <ul id="character-list">
+                    </ul>
+                </div>
+                <div class="col l5 offset-l3" id="character-pannel">
+                    <img id="character-image" src="https://rickandmortyapi.com/api/character/avatar/1.jpeg">
+                    <ul>
+                        <li id="name">Name:</li>
+                        <li id="status">Status:</li>
+                        <li id="species">Species:</li>
+                        <li id="type">Type:</li>
+                        <li id="gender">Gender:</li>
+                        <li id="origin">Origin:</li>
+                        <li id="location">Location:</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
     
-    
-    <section class="container section" id="main">
-        <div class="row">
-            <div class="col s3" id="database">
-               <ul id="character-list">
-               </ul>
+    <div id="generator">
+        <section class="container section">
+            <div class="row">
+                <div class="col l6">
+                    <input type="text" id="userInput" placeholder="Name">
+                    <button type="button">Generate</button>
+                </div>
+                <div class="col l6">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima id recusandae, alias officiis temporibus modi asperiores repellat nesciunt iure vitae perspiciatis repellendus eius explicabo, velit dolore saepe suscipit obcaecati aperiam?</p>
+                </div>
             </div>
-            <div class="col s9" id="generator">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate officiis necessitatibus repellat sunt ab? Ipsa quod totam, impedit numquam inventore iure eveniet ut placeat, ab repellat fugit sunt minus quasi.</p>
-            </div>
-        </div>
-    </section>
-
-
-
+        </section>
+    </div>
 
 
      <!-- Compiled and minified JavaScript -->
