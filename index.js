@@ -9,19 +9,22 @@ document.addEventListener("DOMContentLoaded", () =>{
     const pannelGender = document.getElementById('gender');
     const pannelOrigin = document.getElementById('origin');
     const pannelLocation = document.getElementById('location');
-    
+    const moreButton = document.getElementById('more');
+
     fetch(`https://rickandmortyapi.com/api/character/`)
     .then(resp => resp.json())
     .then(characters => showCharacters(characters.results));
     // .then(obj => console.log(obj.results));
     
     const showCharacters = characters => {
-        characters.forEach(character => {
+        characters.map(characterInfo => {
             const characterElement = document.createElement('li');
-            characterElement.id = `${character.id}`;
-            characterElement.innerHTML =`${character.name}`;
+            // characterElement.id = `${characterInfo.id}`;
+            characterElement.innerHTML =`${characterInfo.name}`;
             characterList.append(characterElement);
-            characterElement.addEventListener('click', pannelUpdate(character));
+            characterElement.addEventListener('click', function(event){
+                pannelUpdate(characterInfo)
+            });
         });
     };
     
@@ -43,7 +46,9 @@ document.addEventListener("DOMContentLoaded", () =>{
         pannelLocation.innerHTML = `Location:  ${character.location.name}`;
     }
     
-    
+    moreButton.addEventListener('click', function(event){
+        nextPage()
+    });
     
 });
 
