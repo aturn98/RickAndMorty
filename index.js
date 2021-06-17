@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () =>{
     let counter = 1;
+    let randomID = 0;
     const characterList = document.getElementById('character-list');
+
     const pannelImage = document.getElementById('character-image');
     const pannelName = document.getElementById('name');
     const pannelStatus = document.getElementById('status');
@@ -9,8 +11,21 @@ document.addEventListener("DOMContentLoaded", () =>{
     const pannelGender = document.getElementById('gender');
     const pannelOrigin = document.getElementById('origin');
     const pannelLocation = document.getElementById('location');
+
     const moreButton = document.getElementById('more');
 
+    const genImage = document.getElementById('gcharacter-image');
+    const genName = document.getElementById('gname');
+    const genStatus = document.getElementById('gstatus');
+    const genSpecies = document.getElementById('gspecies');
+    const genType = document.getElementById('gtype');
+    const genGender = document.getElementById('ggender');
+    const genOrigin = document.getElementById('gorigin');
+    const genLocation = document.getElementById('glocation');
+
+    const genButton = document.getElementById('gen-button');
+    
+    
     fetch(`https://rickandmortyapi.com/api/character/`)
     .then(resp => resp.json())
     .then(characters => showCharacters(characters.results));
@@ -50,6 +65,32 @@ document.addEventListener("DOMContentLoaded", () =>{
         nextPage()
     });
     
+    function randomNumber(){
+        randomID = Math.floor(Math.random() * (671 - 1 + 1) + 1);
+        return randomID;
+    };
+
+    function generateCharacter(){
+        randomNumber();
+        fetch(`https://rickandmortyapi.com/api/character/${randomID}`)
+        .then(resp => resp.json())
+        .then(character => genUpdate(character));
+    }
+
+    function genUpdate(character){
+        genImage.src = `${character.image}`;
+        genName.innerHTML = `Name:  ${character.name}`;
+        genStatus.innerHTML = `Status:  ${character.status}`;
+        genSpecies.innerHTML = `Species:  ${character.species}`;
+        genType.innerHTML = `Type:  ${character.type}`;
+        genGender.innerHTML = `Gender:  ${character.gender}`;
+        genOrigin.innerHTML = `Origin:  ${character.origin.name}`;
+        genLocation.innerHTML = `Location:  ${character.location.name}`;
+    };
+
+    genButton.addEventListener('click', function(event){
+        generateCharacter();
+    });
 });
 
     
