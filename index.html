@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src='index.js' defer></script>
     <link rel="stylesheet" href="style.css">
+    <style>ul {cursor: pointer;}</style>
     <title>Rick and Morty Database</title>
 </head>
 <body>
@@ -61,7 +62,7 @@
                     <input type="text" id="user-input" placeholder="Name">
                     <button type="button" id='gen-button'>Generate</button>
                 </div>
-                <div class="col l6">
+                <div class="col l6" id='gcharacter-pannel'>
                     <img id="gcharacter-image" src="">
                     <ul>
                         <li id="gname">Name:</li>
@@ -78,12 +79,12 @@
 
 
      <!-- Compiled and minified JavaScript -->
-     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-     <script>
-         $(document).ready(function(){
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function(){
             $('.tabs').tabs();
-         });
-     </script>
+        });
+    </script>
 </body>
 </html>

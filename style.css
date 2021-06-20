@@ -13,10 +13,60 @@ html {
 }
 
 #character-image {
-    padding-top: 1em;
+     border-radius: 2em;
+    border: 5px solid black;
+    
+}
+
+#gcharacter-image {
     border-radius: 2em;
+   border: 5px solid black;
+   
 }
 
 #character-list {
     padding-left: 1em;
+    font-family:monospace;
+    font-size: 1.2em;
 }
+
+#character-pannel{
+    padding-left: 1em;
+    font-family:monospace;
+    font-size: 1.2em;
+}
+
+#gcharacter-pannel{
+    padding-left: 1em;
+    font-family:monospace;
+    font-size: 1.2em;
+}
+
+ /* .css-selector {
+    background: linear-gradient(359deg, #ff06ea, #7d7d7d, #7bf2ff);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 19s ease infinite;
+    -moz-animation: AnimationName 19s ease infinite;
+    -o-animation: AnimationName 19s ease infinite;
+    animation: AnimationName 19s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+} */

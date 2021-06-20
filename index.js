@@ -40,15 +40,15 @@ document.addEventListener("DOMContentLoaded", () =>{
             characterElement.addEventListener('click', function(event){
                 pannelUpdate(characterInfo)
             });
+            characterElement.addEventListener('mouseover', function(event){
+                event.target.style.color = 'orange';
+                setTimeout(function(){
+                    event.target.style.color  = '';
+                }, 500);
+            });
+
         });
     };
-    
-    function nextPage(){
-        counter++
-        fetch(`https://rickandmortyapi.com/api/character/?page=${counter}`)
-        .then(resp => resp.json())
-        .then(characters => showCharacters(characters.results));
-    }
     
     function pannelUpdate(character){
         pannelImage.src = `${character.image}`;
@@ -61,6 +61,13 @@ document.addEventListener("DOMContentLoaded", () =>{
         pannelLocation.innerHTML = `Location:  ${character.location.name}`;
     }
     
+    function nextPage(){
+        counter++
+        fetch(`https://rickandmortyapi.com/api/character/?page=${counter}`)
+        .then(resp => resp.json())
+        .then(characters => showCharacters(characters.results));
+    }
+
     moreButton.addEventListener('click', function(event){
         nextPage()
     });
